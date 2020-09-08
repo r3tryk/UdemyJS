@@ -9,15 +9,15 @@ let personalMovieDB = {
     privat : false
 };
 
-let oneQuestion = prompt('Один из последних посмотренных фильмов?');
+let a = prompt('Один из последних посмотренных фильмов?');
 console.log(oneQuestion);
-let secondQestion = prompt('На сколько вы оцените его?');
+let b = prompt('На сколько вы оцените его?');
 console.log(secondQestion);
-let b = prompt('Один из последних посмотренных фильмов?');
-let c = prompt('На сколько вы оцените его?');
+let c = prompt('Один из последних посмотренных фильмов?');
+let d = prompt('На сколько вы оцените его?');
 
-personalMovieDB.movies[oneQuestion] = secondQestion;
-personalMovieDB.movies[b] = c;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
 
 
