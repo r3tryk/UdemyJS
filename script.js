@@ -1,4 +1,5 @@
-let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
 console.log(numberOfFilms);
 
 let personalMovieDB = {
@@ -9,16 +10,20 @@ let personalMovieDB = {
     privat : false
 };
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних посмотренных фильмов?', '');
-          b = prompt('На сколько вы оцените его?', '');
-          //нижняя строка проверяет : если пользователь нажал отмена(тоесть а = null)и также с б , пользователь не отправил пустую строку , и кол-во символов меньше 50.
-    if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
-        personalMovieDB.movies[a] = b;  
-    } else {
-        i--;
-    }
-    
+// for (let i = 0; i < 2; i++) {
+//     let a = prompt('Один из последних посмотренных фильмов?', '');
+//           b = prompt('На сколько вы оцените его?', '');
+//           //нижняя строка проверяет : если пользователь нажал отмена(тоесть а = null)и также с б , пользователь не отправил пустую строку , и кол-во символов меньше 50.
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
+//         personalMovieDB.movies[a] = b;  
+//     } else {
+//         i--;
+//     }    
+// }
+const a = prompt('Один из последних посмотренных фильмов?', '');
+      b = prompt('На сколько вы оцените его?', '');
+while (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50){
+             personalMovieDB.movies[a] = b;
 }
 
 if (personalMovieDB.count < 10) {
@@ -32,5 +37,4 @@ if (personalMovieDB.count < 10) {
 }
 
 console.log(personalMovieDB);
-
 
